@@ -1,3 +1,25 @@
+
+/*헤드라이너*/
+.head-line-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.icon-button{
+    padding: 8px 9px 9px;
+    margin-top: 5px;
+}
+
+.icon-button:hover{
+   background-color: beige;
+}
+
+/*side 상태바*/
+.hide {
+    display: none;
+} 
+
 .head-line{
     margin-top: 1em;
     display: flex;
@@ -5,11 +27,14 @@
 }
 .head-line svg{
     width: 430px;
+    margin: 0px 20px;
 }
+
+
 .menus{
-    margin-top: 1em;
     display: flex;
     justify-content: center;
+    padding: 5px 0 4px;
     flex-wrap: wrap; /*안으로 들어가짐*/
     border-top: 1px solid #ebebeb;
     border-bottom: 4px double black;
@@ -21,14 +46,32 @@
 }
 .menus button:hover{
   background-color: beige;
+  border-radius: 3px;
 }
 .new-img-size{
     max-width: 100%;
     max-height: 250px;
+    margin-right: 1em;
+    text-align: center;
 }
 .news{
+    display: flex;
+    padding: 1em;
     border-bottom:  2px solid black;
 
+}
+
+/*세부창 css*/
+.title{
+    font-size: 20pt;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin-top: 2em;
+}
+.title:hover {
+    text-decoration: underline;
+    color: blue;
 }
 
 /* 사이드 메뉴 */
@@ -69,4 +112,55 @@
     border: none;
     background-color: none;
 }
+
+/*검색창 css*/
+.search-button{
+    background-color: rgb(86, 123, 149);
+    background-color: rgb(50, 104, 145);
+    color: rgb(255, 255, 255);
+    height: 33px;
+    border-radius: 3px;
+}
+
+#search-input{
+    border: 1px solid rgb(226, 226, 226);
+    border-radius: 3px;
+    height: 33px;
+}
+#input-area {
+    display: none;
+}
+
+
+/*크키에 따라 메뉴창 변경*/
+@media screen and (max-width : 63rem) {
+    .hide {
+        display: inline;
+      }
+    .menus {
+        display: none;
+    }
+}
+
+.pagination-nav{
+    display: flex;
+    justify-content: center;
+}
+
+.pagination{
+    margin-top: 1em;
+}
+
+.page-item.active .page-link{
+    background-color: burlywood;
+    color: white;
+    border-color: burlywood;
+}
+.page-link{
+    color:burlywood
+}
+.col-lg-8{
+    margin-top:1em
+}
+
 
